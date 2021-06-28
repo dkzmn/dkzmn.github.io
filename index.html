@@ -81,9 +81,9 @@
                                     document.getElementById("DataToSignTxtBox").innerHTML = txtDataToSign;
                                     document.getElementById("SignatureTxtBox").innerHTML = "";
                                     var canPromise = !!window.Promise;
-                                    if(isEdge()) {
-                                        ShowEdgeNotSupported();
-                                    } else {
+                                    // if(isEdge()) {
+                                    //     ShowEdgeNotSupported();
+                                    // } else {
                                         if(canPromise) {
                                             cadesplugin.then(function () {
                                                     Common_CheckForPlugIn();
@@ -104,7 +104,7 @@
                                                 },
                                                 false);
                                             window.postMessage("cadesplugin_echo_request", "*");
-                                        }
+                                        // }
                                     }
                                 </script>
                             </div>
